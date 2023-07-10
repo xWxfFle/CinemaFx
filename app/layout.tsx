@@ -5,7 +5,7 @@ import { Nunito } from 'next/font/google'
 const nunito = Nunito({ subsets: ['latin'], variable: '--font-nunito' })
 
 export const metadata: Metadata = {
-  title: '🎞 CimenaFx',
+  title: 'CimenaFx',
   description: 'Movie ticket purchase ',
 }
 
