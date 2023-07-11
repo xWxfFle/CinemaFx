@@ -1,4 +1,5 @@
 import './globals.css'
+import { EffectorNext } from '@effector/next'
 import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
 
@@ -16,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={nunito.variable}>{children}</body>
+      <body className={nunito.variable}>
+        <EffectorNext>{children}</EffectorNext>
+      </body>
     </html>
   )
 }

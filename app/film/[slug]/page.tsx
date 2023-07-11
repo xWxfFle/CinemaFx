@@ -1,9 +1,14 @@
-import { FilmCard } from '@/components/film-card'
+import { EffectorNext } from '@effector/next'
+import { allSettled, fork, serialize } from 'effector'
+import { $filmsToday, filmsFetched } from '@/app/model'
+import { FilmCard } from '@/components/ui/film-card'
 
-export default function Home() {
+export default async function Page() {
   return (
-    <main>
-      <FilmCard image="/Barbie.jpg" />
-    </main>
+    <EffectorNext >
+      <main>
+        <FilmCard image="/Barbie.jpg" />
+      </main>
+    </EffectorNext>
   )
 }
