@@ -1,6 +1,7 @@
 import { createEffect, createEvent, createStore, sample } from 'effector'
-import { debug } from 'patronum'
 import { Film } from '@/types'
+
+export const filmPageStarted = createEvent()
 
 export const $filmsToday = createStore<null | Film[]>(null)
 
@@ -18,4 +19,7 @@ sample({
   target: $filmsToday,
 })
 
-debug($filmsToday, fetchFilmsFx, filmsFetched)
+sample({
+  clock: filmPageStarted,
+  target: filmsFetched,
+})
